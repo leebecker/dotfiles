@@ -14,6 +14,8 @@ brew cask install vimr
 brew install git
 
 # gitx - GUI fro Git operations
+# For OS X Sierra you will need to download and install package from
+# https://rowanj.github.io/gitx/
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null 2> /dev/null ; brew install caskroom/cask/brew-cask 2> /dev/null
 brew cask install gitx
 
