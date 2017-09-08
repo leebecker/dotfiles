@@ -33,13 +33,13 @@ parse_git_branch() {
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-
-source ~/.bash_prompt
+for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
 
 
 set -o vi
-alias ll='ls -l'
-alias vimr='/Applications/VimR.app/Contents/Resources/vimr'
 
 # added by Anaconda3 4.4.0 installer
 export PATH="/Users/leebecker/anaconda3/bin:$PATH"
@@ -56,3 +56,27 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
+
+
+#   -----------------------------
+#   2.  MAKE TERMINAL BETTER
+#   -----------------------------
+
+alias ls='ls -GFh'
+alias cp='cp -iv'                           # Preferred 'cp' implementation
+alias mv='mv -iv'                           # Preferred 'mv' implementation
+alias mkdir='mkdir -pv'                     # Preferred 'mkdir' implementation
+alias ll='ls -FGlAhp'                       # Preferred 'ls' implementation
+
+alias .2='cd ../../'                        # Go back 2 directory levels
+alias .3='cd ../../../'                     # Go back 3 directory levels
+alias .4='cd ../../../../'                  # Go back 4 directory levels
+alias .5='cd ../../../../../'               # Go back 5 directory levels
+alias .6='cd ../../../../../../'            # Go back 6 directory levels
+
+trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
+ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
+
+alias vimr='/Applications/VimR.app/Contents/Resources/vimr'
+
+
