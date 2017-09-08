@@ -53,10 +53,6 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 #export LSCOLORS=ExFxBxDxCxegedabagacad
 
 
-alias vim="nvim"
-alias vi="nvim"
-alias oldvim="vim"
-
 
 #   -----------------------------
 #   2.  MAKE TERMINAL BETTER
@@ -78,5 +74,13 @@ trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the 
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 
 alias vimr='/Applications/VimR.app/Contents/Resources/vimr'
+
+if type nvim > /dev/null 2>&1; then
+  alias vim="nvim"
+  alias vi="nvim"
+  alias oldvim="vim"
+  alias vimdiff='nvim -d'
+  export EDITOR=nvim
+fi
 
 
