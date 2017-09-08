@@ -19,6 +19,8 @@ Plug 'freeo/vim-kalisi'
 " editing
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " code/syntax
 Plug 'pangloss/vim-javascript'
