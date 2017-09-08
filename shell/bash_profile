@@ -1,0 +1,58 @@
+#  ---------------------------------------------------------------------------
+#
+#  Description:  This file holds all my BASH configurations and aliases
+#
+#  Sections:
+#  1.   Environment Configuration
+#  2.   Make Terminal Better (remapping defaults and adding functionality)
+#  3.   File and Folder Management
+#  4.   Searching
+#  5.   Process Management
+#  6.   Networking
+#  7.   System Operations & Information
+#  8.   Web Development
+#  9.   Reminders & Notes
+#
+#  ---------------------------------------------------------------------------
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+# Git branch in prompt.
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+#   -------------------------------
+#   1.  ENVIRONMENT CONFIGURATION
+#   -------------------------------
+
+#   Change Prompt
+#   ------------------------------------------------------------
+
+
+# Load the shell dotfiles, and then some:
+# * ~/.path can be used to extend `$PATH`.
+# * ~/.extra can be used for other settings you don’t want to commit.
+
+source ~/.bash_prompt
+
+
+set -o vi
+alias ll='ls -l'
+alias vimr='/Applications/VimR.app/Contents/Resources/vimr'
+
+# added by Anaconda3 4.4.0 installer
+export PATH="/Users/leebecker/anaconda3/bin:$PATH"
+
+
+## terminal color settings
+export CLICOLOR=1
+# for dark Terminal themes
+export LSCOLORS=GxFxCxDxBxegedabagaced
+# for light Terminal themes
+#export LSCOLORS=ExFxBxDxCxegedabagacad
+
+
+alias vim="nvim"
+alias vi="nvim"
+alias oldvim="vim"
