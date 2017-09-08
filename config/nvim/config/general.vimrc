@@ -1,5 +1,5 @@
 if has("gui_vimr")
-    colorscheme solarized
+    colorscheme seoul256-light
     set background=light
 else
     colorscheme zenburn

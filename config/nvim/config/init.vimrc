@@ -11,8 +11,20 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 " colorschemes
-Plug 'https://github.com/jnurmine/Zenburn'
-Plug 'https://github.com/frankier/neovim-colors-solarized-truecolor-only'
+Plug 'jnurmine/Zenburn'
+Plug 'frankier/neovim-colors-solarized-truecolor-only'
+Plug 'junegunn/seoul256.vim'
+Plug 'freeo/vim-kalisi'
+
+" editing
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+
+" code/syntax
+Plug 'pangloss/vim-javascript'
+Plug 'elzr/vim-json'
+
+
 
 call plug#end()
 
