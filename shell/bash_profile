@@ -44,6 +44,9 @@ set -o vi
 # added by Anaconda3 4.4.0 installer
 export PATH="/Users/leebecker/anaconda3/bin:$PATH"
 
+# adding user dir bin
+export PATH="~/bin/:$PATH"
+
 
 ## terminal color settings
 export CLICOLOR=1
@@ -73,7 +76,11 @@ alias .6='cd ../../../../../../'            # Go back 6 directory levels
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
 
-alias vimr='/Applications/VimR.app/Contents/Resources/vimr'
+#alias vimr='/Applications/VimR.app/Contents/Resources/vimr'
+if [[ ! `which vimr` ]]; then
+    echo "No vimr command-line tool installed.  Use VimR GUI to install to \
+        /usr/local/bin or similar.  VimR->Preferences->General->CLI Tool"
+fi
 
 if type nvim > /dev/null 2>&1; then
   alias vim="nvim"
