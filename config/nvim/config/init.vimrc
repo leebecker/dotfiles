@@ -26,6 +26,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'pangloss/vim-javascript'
 Plug 'elzr/vim-json'
 
+" EJS (embedded javascript) syntax plugin
+Plug 'nikvdp/ejs-syntax'
+
 
 
 call plug#end()
