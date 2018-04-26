@@ -21,6 +21,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'dsummersl/vim-utf2ascii'
+
 
 " code/syntax
 Plug 'pangloss/vim-javascript'
@@ -28,6 +30,9 @@ Plug 'elzr/vim-json'
 
 " EJS (embedded javascript) syntax plugin
 Plug 'nikvdp/ejs-syntax'
+
+" ALE linter / flake 8
+Plug 'w0rp/ale'
 
 
 
