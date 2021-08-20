@@ -38,3 +38,29 @@ Here are some local symlinks to create
 ```
 ln -Fs $DOTFILES/git/gitignore_global ~/.gitignore_global
 ```
+# ipython setup
+This is how to get ipython setup for vi keys
+```
+$ ipython --TerminalInteractiveShell.editing_mode=vi
+```
+
+or to set it globally in the profile configuration (`~/.ipython/profile_default/ipython_config.py`; create it with ipython profile create if you don't have it) with:
+```
+c.TerminalInteractiveShell.editing_mode = 'vi'
+
+```
+
+In your `~/.inputrc` file put:
+```
+set editing-mode vi
+set keymap vi
+set convert-meta on
+```
+
+https://newbedev.com/how-do-i-use-vi-keys-in-ipython-under-nix
+
+
+# Extras
+you can put things you don't want to commit to git in ~/.extra
+This is a good place to put git credentials
+
