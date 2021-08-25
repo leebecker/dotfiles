@@ -31,7 +31,7 @@ ln -Fs $DOTFILES/config/nvim ~/.config/nvim
 
 
 # Git setup
-For a good overview of how to setup git, read this [Creating a Happy Git Environment README](https://gist.github.com/trey/2722934)
+For a good overview of how to setup git, read this [Creating a Happy Git Environment README](https://gist.github.com/trey/2722934).  Follow these to get email, bash-completion and more.
 
 
 Here are some local symlinks to create
